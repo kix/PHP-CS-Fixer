@@ -44,12 +44,31 @@ Then, just run ``php-cs-fixer``.
 Globally (homebrew)
 ~~~~~~~~~~~~~~~~~~~
 
-PHP-CS-Fixer is part of the homebrew-php project:
+PHP-CS-Fixer is part of the homebrew-php project. To install it via Homebrew, make 
+sure your PHP installation has ```phar.readonly``` set to ``òff```, then issue the 
+following commands:
 
 .. code-block:: bash
 
     $ brew tap josegonzalez/homebrew-php
     $ brew install php-cs-fixer
+    
+Globally (Composer)
+~~~~~~~~~~~~~~~~~~~
+
+You can install PHP-CS-Fixer globally with Composer:
+
+.. code-block:: bash
+
+    $ composer global require fabpot/php-cs-fixer @stable
+    
+Then, make sure you have ``~/.composer/vendor/bin`` in your ``PATH``:
+
+.. code-block:: bash
+
+    export PATH="$PATH:$HOME/.composer/vendor/bin"
+    
+... and you're good to go!
 
 Update
 ------
